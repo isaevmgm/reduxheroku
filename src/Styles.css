@@ -1,0 +1,42 @@
+.main {
+    margin: auto;
+    width: 1600px;
+}
+.person-data {
+    text-align: center;
+    font-size: 30px;
+    color: midnightblue;;
+    border: 1px solid black;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: palegoldenrod;
+}
+.element {
+    font-size: 25px;
+    color: midnightblue;
+    padding-left: 50px;
+}
+.elementc {
+    font-size: 25px;
+    color: midnightblue;
+    padding-left: 50px;
+}
+.elemc {
+    font-size: 25px;
+    color: darkred;
+    border-bottom: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+.elem {
+    padding-top: 30px;
+    font-size: 25px;
+    color: darkred;
+    padding-left: 30px;
+}
+
+.block {
+    background-color: palegoldenrod;
+    border: 1px solid black;
+}
