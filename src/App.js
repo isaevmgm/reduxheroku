@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {loadTodos} from "./Actions";
+import {loadTodos, removeTodo} from "./Actions";
 import {useEffect} from "react";
 
 
@@ -9,39 +9,49 @@ function App() {
     const loading = useSelector(state => state.loading);
 
     const dispatch = useDispatch();
-
     useEffect(() => {
-        dispatch(loadTodos());
+        dispatch(loadTodos())
     }, []);
 
-
-
+    const handleDelete = (id) => {
+        dispatch(removeTodo(id))
+    }
 
   return (
-      <div className='main'>
-          <div className='person-data'>
-              Data:
+      <div className="container">
+          <div className="header">
+              Email addresses:
           </div>
-          <div className='block'>
-              {loading ? 'идет загрузка...' : (
-                  todos.map (todo => {
-                      return(
-                          <div>
-                              <div className='elem'>
-                                  <span className='element'>ID:</span> {todo.id}
-                              </div>
-                              <div className='elem'>
-                                  <span className='element'>Title:</span> {todo.title}
-                              </div>
-                              <div className='elemc'>
-                                  <span className='elementc'>Body:</span> {todo.body}
-                              </div>
+          {loading ? 'Загрузка' : (
+              todos.map((todo) => {
+                  return(
+                      <div className="todo">
+                          {todo.email}
+                          <div className="add">
+                              <button
+                                  className="btn"
+                                  onClick={() => handleDelete(todo.id)}
+                                  disabled={todo.deleting}
+                              >
+                                  Delete
+                              </button>
                           </div>
-                      )
-                  }))}
-          </div>
+                      </div>
+                  )
+              }))}
       </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+

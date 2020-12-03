@@ -1,42 +1,29 @@
-.main {
+.container {
+    width: 650px;
     margin: auto;
-    width: 1100px;
-}
-.person-data {
-    text-align: center;
-    font-size: 30px;
-    color: #003399;
-    border: 1px solid black;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    background-color: khaki;
-}
-.element {
-    font-size: 25px;
-    color: #003399;
-    padding-left: 50px;
-}
-.elementc {
-    font-size: 25px;
-    color: #003399;
-    padding-left: 50px;
-}
-.elemc {
-    font-size: 25px;
-    color: darkred;
-    border-bottom: 1px solid black;
-    padding-top: 15px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-}
-.elem {
-    padding-top: 30px;
-    font-size: 25px;
-    color: darkred;
-    padding-left: 30px;
 }
 
-.block {
-    background-color: khaki;
-    border: 1px solid black;
+.header {
+    border-bottom: 3px solid darkblue;
+    font-size: 25px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.todo {
+    border-bottom: 2px solid cornflowerblue;
+    font-size: 20px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: darkblue;
+    color: white;
+}
+
+.btn[disabled] {
+    cursor: default;
+    background-color: #00339999;
 }
